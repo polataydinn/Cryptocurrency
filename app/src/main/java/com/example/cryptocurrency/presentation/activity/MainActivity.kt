@@ -1,7 +1,8 @@
-package com.example.cryptocurrency
+package com.example.cryptocurrency.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.cryptocurrency.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
