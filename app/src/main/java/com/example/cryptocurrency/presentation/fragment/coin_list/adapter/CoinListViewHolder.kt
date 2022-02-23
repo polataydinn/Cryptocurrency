@@ -9,10 +9,12 @@ import com.example.cryptocurrency.domain.model.Coin
 class CoinListViewHolder(private val binding: CustomCoinListItemBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(coin: Coin, onItemClick: ((Coin) -> Unit)?) {
-        val coinName = "${coin.id}. ${coin.name}"
+        val coinName = "${coin.rank}. ${coin.name}"
         binding.coinNameTextView.text = coinName
 
         if (!coin.isActive) {
+            val inactive = "inactive"
+            binding.isActiveTextView.text = inactive
             binding.isActiveTextView.setTextColor(
                 getColor(
                     binding.isActiveTextView.context,

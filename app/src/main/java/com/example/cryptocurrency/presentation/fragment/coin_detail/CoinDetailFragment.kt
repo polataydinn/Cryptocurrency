@@ -22,6 +22,7 @@ class CoinDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val coin = arguments?.get("coin")
+        print("breakpoint")
     }
 }

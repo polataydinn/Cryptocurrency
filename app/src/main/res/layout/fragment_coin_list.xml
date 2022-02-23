@@ -7,6 +7,14 @@
     android:background="@color/light_black"
     tools:context=".presentation.fragment.coin_list.CoinListFragment">
 
+    <ProgressBar
+        android:id="@+id/coin_list_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/coin_list_recyclerview"
         android:layout_marginTop="8dp"
@@ -14,6 +22,7 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="20"
+        android:visibility="gone"
         tools:listitem="@layout/custom_coin_list_item" />
 
 </FrameLayout>

@@ -1,12 +1,16 @@
 package com.example.cryptocurrency.presentation.fragment.coin_list
 
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptocurrency.common.Resource
 import com.example.cryptocurrency.domain.use_case.get_coins.GetCoinsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
@@ -16,8 +20,8 @@ class CoinListViewModel @Inject constructor(
     private val getCoinsUseCase: GetCoinsUseCase
 ) : ViewModel() {
 
-    private val _state = mutableStateOf(CoinListState())
-    val state: State<CoinListState> = _state
+    private val _state = MutableStateFlow(CoinListState())
+    val state: MutableStateFlow<CoinListState> = _state
 
     init {
         getCoins()
