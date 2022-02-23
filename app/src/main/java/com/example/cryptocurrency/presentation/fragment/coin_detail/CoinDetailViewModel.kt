@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptocurrency.common.Constants
 import com.example.cryptocurrency.common.Resource
-import com.example.cryptocurrency.domain.user_case.get_coin.GetCoinUseCase
+import com.example.cryptocurrency.domain.use_case.get_coin.GetCoinUseCase
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject

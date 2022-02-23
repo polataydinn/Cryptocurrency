@@ -1,9 +1,7 @@
-package com.example.cryptocurrency.domain.user_case.get_coin
+package com.example.cryptocurrency.domain.use_case.get_coin
 
 import com.example.cryptocurrency.common.Resource
-import com.example.cryptocurrency.data.remote.dto.toCoin
 import com.example.cryptocurrency.data.remote.dto.toCoinDetail
-import com.example.cryptocurrency.domain.model.Coin
 import com.example.cryptocurrency.domain.model.CoinDetail
 import com.example.cryptocurrency.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.Flow
