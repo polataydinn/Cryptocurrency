@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CoinDetailDto(
     @SerializedName("description")
-    val description: String,
+    val description: String?,
     @SerializedName("development_status")
     val developmentStatus: String,
     @SerializedName("first_data_at")
@@ -44,7 +44,7 @@ data class CoinDetailDto(
     @SerializedName("symbol")
     val symbol: String,
     @SerializedName("tags")
-    val tags: List<Tag>,
+    val tags: List<Tag>?,
     @SerializedName("team")
     val team: List<TeamMember>,
     @SerializedName("type")
@@ -61,7 +61,7 @@ fun CoinDetailDto.toCoinDetail(): CoinDetail {
         symbol = symbol,
         rank = rank,
         isActive = isActive,
-        tags = tags.map { it.name },
+        tags = tags?.map { it.name },
         team = team
     )
 }

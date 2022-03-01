@@ -21,7 +21,7 @@
         <action
             android:id="@+id/action_coinDetailFragment_to_coinListFragment2"
             app:destination="@id/coinListFragment" />
-        <argument android:name="coinItem"
-            app:argType="com.example.cryptocurrency.domain.model.Coin" />
+        <argument android:name="coinId"
+            app:argType="string" />
     </fragment>
 </navigation>

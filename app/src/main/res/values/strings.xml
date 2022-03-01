@@ -2,4 +2,5 @@
     <string name="app_name">Cryptocurrency</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="coin_description">Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.</string>
 </resources>
